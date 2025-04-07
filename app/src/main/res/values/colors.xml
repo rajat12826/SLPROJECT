@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main color palette - Elegant teal theme -->
+    <color name="colorPrimary">#B06AB3</color>
+    <color name="colorPrimaryDark">#004D40</color>
+    <color name="colorAccent">#FF6E40</color>
+    <color name="main">#00796B</color>
+    <!-- Text colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+
+    <!-- Background colors -->
+    <color name="background">#ECEFF1</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="tableHeader">#00796B</color>
+    <color name="divider">#DDDDDD</color>
+    <color name="progress_track">#E0E0E0</color>
+
+    <!-- Standard colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Status colors -->
+    <color name="good_status">#43A047</color>
+    <color name="warning_status">#FFA000</color>
+    <color name="critical_status">#E53935</color>
+</resources>
