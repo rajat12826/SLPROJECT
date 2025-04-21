@@ -17,31 +17,16 @@ public class AttendanceModel {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getSubject() {
         return subject;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
     }
 
     public int getAttendedClasses() {
         return attendedClasses;
     }
 
-    public void setAttendedClasses(int attendedClasses) {
-        this.attendedClasses = attendedClasses;
-    }
-
     public int getTotalClasses() {
         return totalClasses;
     }
 
-    public void setTotalClasses(int totalClasses) {
-        this.totalClasses = totalClasses;
-    }
 }

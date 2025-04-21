@@ -26,11 +26,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".AttendanceActivity"
+            android:name=".TabbedActivity"
+            android:label="Student Portal"
             android:exported="false"
             android:theme="@style/Theme.ATTENDANCEMANAGER"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+             />
     </application>
 
 </manifest>

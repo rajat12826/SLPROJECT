@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/card_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Subject"
+                android:textSize="18sp"
+                android:textColor="@color/main"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/editTextSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Subject Name"
+                android:textColor="#000000"
+                android:textColorHint="#757575"
+                android:inputType="text"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edit_text_background"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/editTextAttended"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#757575"
+                    android:hint="Classes Attended"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:background="@drawable/edit_text_background"/>
+
+                <EditText
+                    android:id="@+id/editTextTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Total Classes"
+                    android:textColor="#000000"
+                    android:textColorHint="#757575"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:background="@drawable/edit_text_background"/>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Subject"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                app:cornerRadius="6dp"
+                android:backgroundTint="#FF5722" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/card_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attendance Records"
+                android:textSize="18sp"
+                android:textColor="@color/main"
+                android:textStyle="bold"
+                android:layout_margin="16dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="0">
+
+                    <TableRow
+                        android:background="@color/tableHeader"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:text="Subject"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:padding="12dp"
+                            android:minWidth="120dp"/>
+
+                        <TextView
+                            android:text="Attended"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:padding="12dp"
+                            android:gravity="center"
+                            android:minWidth="80dp"/>
+
+                        <TextView
+                            android:text="Total"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:padding="12dp"
+                            android:gravity="center"
+                            android:minWidth="80dp"/>
+
+                        <TextView
+                            android:text="Percentage"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:padding="12dp"
+                            android:gravity="center"
+                            android:minWidth="100dp"/>
+
+                        <TextView
+                            android:text="Actions"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:padding="12dp"
+                            android:gravity="center"
+                            android:minWidth="100dp"/>
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Overall Statistics"
+                android:textColor="@color/main"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewAttendanceStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stats_background"
+                android:padding="12dp"
+                android:text="Overall Attendance: 0/0 (0.0%)"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="8dp"
+                android:progressDrawable="@drawable/custom_progress_bar" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
